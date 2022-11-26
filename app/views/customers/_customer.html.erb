@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= customer.name %></h5>
+  </div>
+  <% if customer.image.present? %>
+    <%= link_to image_tag(customer.image, alt: customer.name, size:"200x200", :class => "card-img-top") %>
+  <% end %>
+  <div class="card-body">
+    <p class="card-text">Province: <%= customer.notes %></p>
+    <p class="card-text"><%= customer.phone %></p>
+    <p class="card-text"><%= customer.email unless !customer.email.present? %></p>
+  </div>
+</div>
